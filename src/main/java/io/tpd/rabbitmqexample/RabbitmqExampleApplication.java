@@ -7,13 +7,15 @@ import org.springframework.amqp.core.TopicExchange;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class RabbitmqExampleApplication {
 
-	private static final String EXCHANGE_NAME = "tips_tx";
-	private static final String DEFAULT_PARSING_QUEUE = "default_parser_q";
-	private static final String ROUTING_KEY = "tips";
+	public static final String EXCHANGE_NAME = "tips_tx";
+	public static final String DEFAULT_PARSING_QUEUE = "default_parser_q";
+	public static final String ROUTING_KEY = "tips";
 
 	public static void main(String[] args) {
 		SpringApplication.run(RabbitmqExampleApplication.class, args);
