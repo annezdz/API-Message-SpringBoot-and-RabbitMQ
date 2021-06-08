@@ -1,6 +1,8 @@
 package io.tpd.rabbitmqexample;
 
-public class PracticalTipMessage {
+import java.io.Serializable;
+
+public class PracticalTipMessage implements Serializable {
 
     private final String text;
     private final int priority;
